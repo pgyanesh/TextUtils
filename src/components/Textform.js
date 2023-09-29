@@ -1,6 +1,17 @@
 import React, {useState} from 'react'
 
 export default function Textform(props) {
+
+   const removeSpaces=()=>{
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "))
+   }
+
+    const copyText=()=>{
+        let text = document.getElementById("myBox")
+        text.select();
+        navigator.clipboard.writeText(text.value)
+    }
      const clearText = ()=>{
         setText("");
     }
@@ -23,9 +34,11 @@ export default function Textform(props) {
 <div className="mb-3">
  
 <textarea className="form-control" value ={text} onChange={handleOnChange} id="myBox" rows="5"></textarea>
-<button className='btn btn-primary my-3 mx-1' onClick={clearText}>Clear Text</button>
-<button className='btn btn-primary my-3' onClick={toUpCase}>To Upper Case</button>
-<button className='btn btn-primary my-3 mx-1' onClick={toLoCase}>To Lower Case</button>
+<button className='btn btn-dark my-3 mx-1' onClick={clearText}>Clear Text</button>
+<button className='btn btn-dark my-3 mx-1' onClick={copyText}>Copy text</button>
+<button className='btn btn-dark my-3 mx-1' onClick={removeSpaces}>Remove Extra Spaces</button>
+<button className='btn btn-dark my-3 mx-1' onClick={toUpCase}>To Upper Case</button>
+<button className='btn btn-dark my-3 mx-1' onClick={toLoCase}>To Lower Case</button>
 </div>
     </div>
     <div className='container'>
