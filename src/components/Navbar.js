@@ -14,6 +14,9 @@ export default function Navbar() {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/">About</a>
+        </li>
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

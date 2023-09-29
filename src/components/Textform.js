@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 
 export default function Textform(props) {
+     const clearText = ()=>{
+        setText("");
+    }
     const toUpCase = ()=>{
         let newText = text.toUpperCase()
         setText(newText);
@@ -20,6 +23,7 @@ export default function Textform(props) {
 <div className="mb-3">
  
 <textarea className="form-control" value ={text} onChange={handleOnChange} id="myBox" rows="5"></textarea>
+<button className='btn btn-primary my-3 mx-1' onClick={clearText}>Clear Text</button>
 <button className='btn btn-primary my-3' onClick={toUpCase}>To Upper Case</button>
 <button className='btn btn-primary my-3 mx-1' onClick={toLoCase}>To Lower Case</button>
 </div>
