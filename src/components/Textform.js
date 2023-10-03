@@ -38,7 +38,7 @@ export default function Textform(props) {
         <h1>{props.heading}</h1>
 <div className="mb-3">
  
-<textarea className="form-control" value ={text} style={{backgroundColor:props.mode==='light'?'white':'black'}} onChange={handleOnChange} id="myBox" rows="5"></textarea>
+<textarea className="form-control" value ={text} style={{backgroundColor:props.mode==='light'?'white':'black', color:props.mode==='light'?'black':'white'}} onChange={handleOnChange} id="myBox" rows="5"></textarea>
 <button className='btn btn-dark my-3 mx-1 my-1' onClick={clearText}>Clear Text</button>
 <button className='btn btn-dark my-3 mx-1  my-1' onClick={copyText}>Copy text</button>
 <button className='btn btn-dark my-3 mx-1  my-1' onClick={removeSpaces}>Remove Extra Spaces</button>
